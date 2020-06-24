@@ -34,6 +34,10 @@ app.post("/leaderboard", async function(request, response) {
     //check if player name = null and player id = null. if both are null => deny req
     var playerName = request.body.playerName;
     var player_ID = request.body.playerID;//players_id;
+
+    if(!playerName && !player_ID) {
+      response.sendStatus(400);
+    }
     
     if (!player_ID) {
       //console.log("looking up player_ID from playerName");
