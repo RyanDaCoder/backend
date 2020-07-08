@@ -81,7 +81,7 @@ app.post("/leaderboard", async function(request, response) {
 });
 
 
-app.listen(3001, function() {
+app.listen(process.env.PORT || 3001, function() {
     console.log("App on port 3001");
   });
 
