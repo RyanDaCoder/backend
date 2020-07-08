@@ -80,9 +80,9 @@ app.post("/leaderboard", async function(request, response) {
   }
 });
 
-
-app.listen(process.env.PORT || 3001, function() {
-    console.log("App on port 3001");
-  });
+let port = process.env.PORT || 3001;
+app.listen(port, function() {
+    console.log("App on port " + port);
+});
 
 console.log("after after");
