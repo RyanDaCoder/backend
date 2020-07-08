@@ -5,7 +5,11 @@ let DB_URI;
 
 if (process.env.NODE_ENV === "test") {  
     DB_URI = "postgresql:///users_test";
-} else {
+} 
+else if (process.env.DATABASE_URL === "production") {
+    DB_URI = process.env.DATABASE_URL;
+}
+else {
     DB_URI = "postgresql:///leaderboard";
 }
 
@@ -18,7 +22,7 @@ db.connect();
 catch(err) {
     console.log("Your DB isn't connecting", err)
 }
-module.exports = db;  
+module.exports = db; 
 
  
  
