@@ -17,7 +17,10 @@ let db = new Client({
     connectionString: DB_URI
 });
 try {
+console.log("before connect")
 db.connect();
+console.log("after connect")
+
 }
 catch(err) {
     console.log("Your DB isn't connecting", err)
