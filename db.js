@@ -7,7 +7,7 @@ if (process.env.NODE_ENV === "test") {
     DB_URI = "postgresql:///users_test";
 } 
 else if (process.env.DATABASE_URL === "production") {
-    DB_URI = process.env.DATABASE_URL;
+    DB_URI = process.env.DATABASE_URL + "://leaderboard";
 }
 else {
     DB_URI = "postgresql:///leaderboard";
