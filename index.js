@@ -3,7 +3,9 @@ const axios = require("axios");
 const express = require("express");
 
 const app = express();
+console.log("before")
 const db = require("./db");
+console.log("after");
 const player = require("./player");
 
 const cors = require("cors");
